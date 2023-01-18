@@ -93,7 +93,7 @@ Biz kodları müxtəlif səbəblərə görə şərh edirik və React-da JSX elem
 JSX Elementinin göstərilməsi
 JSX elementini HTML sənədinə göstərmək üçün əvvəlcə HTML indeksi yaratmalıyıq. index.html istənilən React Tətbiqində olacaq yeganə HTML faylıdır. Buna görə də deyirik ki, hər bir React Tətbiqi tək səhifəli proqramdır. Gəlin index.html faylı yaradaq. React ilə iki yolla başlaya bilərik - ya CDN-dən istifadə etməklə, ya da create-react-app. create-react-app React layihəsinin çıxış qutusu yaradır və buna görə də bir çox insanlar React-in necə işlədiyini başa düşməkdə çətinlik çəkirlər. Mütləq yeni başlayanlar üçün hər şeyi aydınlaşdırmaq üçün bir CDN ilə başlamaq istərdim. Biz CDN-dən yalnız bu bölmədə istifadə edirik və problemin qalan hissəsində create-react-app istifadə edəcəyik və mən də sizə hər zaman yalnız create-react-app istifadə etməyi tövsiyə edirəm.
 
-``````
+```
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -112,7 +112,7 @@ JSX elementini HTML sənədinə göstərmək üçün əvvəlcə HTML indeksi yar
 
 Yuxarıdakı index.html-dən göründüyü kimi, bizdə id-si root olan div və script teqi var. root div bütün reaksiya komponentlərini index.html-ə qoşmaq üçün qapıdır. Script teqində biz öz JavaScript-imizi yazacağıq, lakin script növü babel olacaq. Babel, JSX reaksiyasını brauzerdə təmiz JavaScript-ə köçürəcək. Ssenariyə babel əlavə edək. Babel daxilində biz istənilən təmiz JavaScript, JSX və ümumiyyətlə istənilən Reaksiya kodunu yaza bilərik.
 
-``````
+```
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -133,7 +133,7 @@ Yuxarıdakı index.html-dən göründüyü kimi, bizdə id-si root olan div və 
 
 Babel kitabxanası bizim sənədimizlə əlaqələndirilib və indi biz ondan istifadə edə bilərik. Növbəti addım CDN və ya linkdən istifadə edərək React və ReactDOM-u idxal etməkdir. React və ReactDOM-u əlaqələndirmək üçün biz hər iki paketi CDN-dən index.html gövdəsinə əlavə edirik. React-ın index.html ilə əlaqəli olub olmadığını yoxlamaq üçün console.log(React) vasitəsilə onu yoxlamağa çalışın. Brauzer konsolunu açın və bir obyekt almalısınız. React metodlarını ehtiva edən obyekt görsəniz, layihənizi React CDN ilə əlaqələndirə bildiniz və siz React istifadə etməyə hazırsınız.
 
-``````
+```
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -159,7 +159,7 @@ Babel kitabxanası bizim sənədimizlə əlaqələndirilib və indi biz ondan is
 
 İndi JSX və JSX elementlərini bilirdiniz. Brauzerdə JSX elementini göstərək, bunun üçün bizə React və ReactDOM kitabxanası lazımdır. React və ReactDOM-a əlavə olaraq JSX-i JavaScript koduna köçürmək üçün bizə babel lazımdır. ReactDOM paketində metod render var. Render metodu iki arqument götürür: JSX elementi və ya komponent və root sənəd.
 
-``````
+```
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -196,7 +196,7 @@ Babel kitabxanası bizim sənədimizlə əlaqələndirilib və indi biz ondan is
 JSX göstərilir
 
 Gəlin daha çox məzmun təqdim edək. Daha çox məzmun göstərmək üçün JSX elementində daha çox HTML elementi olmalıdır. Məsələn, biz veb-saytın başlığını yarada bilərik və başlıqda başlıq, altyazı, müəllif və ya tarix və s. ola bilər. Unutmayın ki, biz eyni vaxtda yalnız bir JSX elementini göstərə bilərik.
-``````
+```
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -305,7 +305,7 @@ const app = (
 )
 ```
 İndi gəlin hər şeyi birləşdirək və brauzerə göstərək.  .
-``````
+```
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -435,7 +435,7 @@ ClassName əvəzinə və ya htmlFor əvəzinə sinif istifadə edilərsə, belə
 Class name xəbərdarlığı
 
 İndi siz daxili üslubdan necə istifadə edəcəyinizi və className-dən necə istifadə edəcəyinizi bilirsiniz. Gəlin bütün JSX elementlərini üslublandıraq.
-``````
+```
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -519,7 +519,7 @@ Class name xəbərdarlığı
 Bütün JSX elementlərinin üslubu
 
 Stil obyekti əvəzinə müntəzəm üslub metodundan istifadə edərək yuxarıdakılardan daha asandır. İndi gəlin bütün JSX-i tərtib etmək üçün daxili üslubdan istifadə edək. Xarici üslub metodundan istifadə etmək də mümkündür. 
-``````
+```
 <!DOCTYPE html>
 <html lang="en">
   <head>
