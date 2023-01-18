@@ -107,7 +107,7 @@ JSX elementini HTML sənədinə göstərmək üçün əvvəlcə HTML indeksi yar
 
     <script></script>
   </body>
-</html>```
+</html>
 ```
 
 Yuxarıdakı index.html-dən göründüyü kimi, bizdə id-si root olan div və script teqi var. root div bütün reaksiya komponentlərini index.html-ə qoşmaq üçün qapıdır. Script teqində biz öz JavaScript-imizi yazacağıq, lakin script növü babel olacaq. Babel, JSX reaksiyasını brauzerdə təmiz JavaScript-ə köçürəcək. Ssenariyə babel əlavə edək. Babel daxilində biz istənilən təmiz JavaScript, JSX və ümumiyyətlə istənilən Reaksiya kodunu yaza bilərik.
@@ -128,7 +128,7 @@ Yuxarıdakı index.html-dən göründüyü kimi, bizdə id-si root olan div və 
       // kodumuzu burada yazacağıq
     </script>
   </body>
-</html>```
+</html>
 ```
 
 Babel kitabxanası bizim sənədimizlə əlaqələndirilib və indi biz ondan istifadə edə bilərik. Növbəti addım CDN və ya linkdən istifadə edərək React və ReactDOM-u idxal etməkdir. React və ReactDOM-u əlaqələndirmək üçün biz hər iki paketi CDN-dən index.html gövdəsinə əlavə edirik. React-ın index.html ilə əlaqəli olub olmadığını yoxlamaq üçün console.log(React) vasitəsilə onu yoxlamağa çalışın. Brauzer konsolunu açın və bir obyekt almalısınız. React metodlarını ehtiva edən obyekt görsəniz, layihənizi React CDN ilə əlaqələndirə bildiniz və siz React istifadə etməyə hazırsınız.
@@ -152,7 +152,7 @@ Babel kitabxanası bizim sənədimizlə əlaqələndirilib və indi biz ondan is
         console.log(React)
     </script>
   </body>
-</html>```
+</html>
 ```
 
 İndi index.html-də React kodunu yazmaq üçün lazım olan hər şey var. Gəlin, document.querySelect('#root') istifadə edərək kök elementi əldə edək və onu rootElement dəyişəninə təyin edək. DOM ilə birbaşa əlaqə qurduğumuz yeganə yerdir.
@@ -191,7 +191,7 @@ Babel kitabxanası bizim sənədimizlə əlaqələndirilib və indi biz ondan is
       ReactDOM.render(jsxElement, rootElement)
     </script>
   </body>
-</html>```
+</html>
 ```
 JSX göstərilir
 
@@ -235,7 +235,7 @@ Gəlin daha çox məzmun təqdim edək. Daha çox məzmun göstərmək üçün J
       ReactDOM.render(header, rootElement)
     </script>
   </body>
-</html>```
+</html>
 ```
 Daha çox məzmun göstərilir
 
@@ -370,7 +370,7 @@ const app = (
       //  ReactDOM.render([header, main, footer], rootElement)
     </script>
   </body>
-</html>```
+</html>
 ```
 
 Çoxsaylı JSX Elementlərinin göstərilməsi
@@ -514,7 +514,7 @@ Class name xəbərdarlığı
       ReactDOM.render(app, rootElement)
     </script>
   </body>
-</html>```
+</html>
 ```
 Bütün JSX elementlərinin üslubu
 
@@ -680,7 +680,7 @@ Stil obyekti əvəzinə müntəzəm üslub metodundan istifadə edərək yuxarı
       ReactDOM.render(app, rootElement)
     </script>
   </body>
-</html>```
+</html>
 ```
 Daxili Stil
 
