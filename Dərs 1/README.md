@@ -110,7 +110,7 @@ JSX elementini HTML sənədinə göstərmək üçün əvvəlcə HTML indeksi yar
 </html>
 ```
 
-Yuxarıdakı index.html-dən göründüyü kimi, bizdə id-si root olan div və script teqi var. root div bütün reaksiya komponentlərini index.html-ə qoşmaq üçün qapıdır. Script teqində biz öz JavaScript-imizi yazacağıq, lakin script növü babel olacaq. Babel, JSX reaksiyasını brauzerdə təmiz JavaScript-ə köçürəcək. Ssenariyə babel əlavə edək. Babel daxilində biz istənilən təmiz JavaScript, JSX və ümumiyyətlə istənilən Reaksiya kodunu yaza bilərik.
+Yuxarıdakı index.html-dən göründüyü kimi, bizdə id-si root olan div və script teqi var. root div bütün react komponentlərini index.html-ə qoşmaq üçün qapıdır. Script teqində biz öz JavaScript-imizi yazacağıq, lakin script növü babel olacaq. Babel, JSX reactsını brauzerdə təmiz JavaScript-ə köçürəcək. Ssenariyə babel əlavə edək. Babel daxilində biz istənilən təmiz JavaScript, JSX və ümumiyyətlə istənilən react kodunu yaza bilərik.
 
 ```
 <!DOCTYPE html>
@@ -382,7 +382,7 @@ Styling JSX Elementi.
 İndi isə başlıq hissəsinə style teqi açaq.
 
 JSX-də stil və class adı
-İndiyə qədər JSX elementlərində heç bir üslub tətbiq etməmişik. İndi gəlin JSX elementlərimizə üslub əlavə edək. Inline üslubu reaksiyanın ortaya çıxmasından sonra çox populyarlaşdı. Başlıq JSX elementinə sərhəd əlavə edək.
+İndiyə qədər JSX elementlərində heç bir üslub tətbiq etməmişik. İndi gəlin JSX elementlərimizə üslub əlavə edək. Inline üslubu reactnın ortaya çıxmasından sonra çox populyarlaşdı. Başlıq JSX elementinə sərhəd əlavə edək.
 
 JSX elementinə üslub əlavə etmək üçün biz inline stil və ya className istifadə edirik. Stil obyektini {} istifadə edərək inyeksiya edirik. Hər bir CSS xüsusiyyəti açara çevrilir və hər bir CSS xassə dəyəri obyekt üçün dəyərə çevrilir. Məsələn, aşağıdakı nümunədə haşiyə açar və '2px solid orange' dəyər, color açar və 'black' dəyər, fontSize açar və '18px' dəyərdir. React və ya JavaScript-də CSS obyektində açar kimi istifadə etdikdə bütün iki sözlü CSS xassələri camelCase-ə dəyişəcək.
 ```
@@ -981,7 +981,7 @@ Biz JSX-ə sətir, nömrə, boolean, massiv verilənlərini yeridə bilərik, la
 ```
 Dinamik məlumat
 
-Gördüyünüz kimi siyahıların hamısı bir sətirdədir. Ona görə də JSX-ə yeritməzdən əvvəl siyahını istədiyimiz kimi formatlaşdırmalıyıq. Siyahını formatlaşdırmaq üçün onu JSX-ə yeritməzdən əvvəl onu dəyişdirməliyik. Xəritədən istifadə edərək massivi dəyişdirə bilərik . Reaksiya tərtibatçısı olaraq siz funksional proqramlaşdırmanı çox yaxşı başa düşməlisiniz (xəritə, filtr, azaltma, tapmaq, bəziləri, hər biri). Əgər funksional proqramlaşdırmanı yaxşı başa düşmürsünüzsə, 1-ci günə baxın.
+Gördüyünüz kimi siyahıların hamısı bir sətirdədir. Ona görə də JSX-ə yeritməzdən əvvəl siyahını istədiyimiz kimi formatlaşdırmalıyıq. Siyahını formatlaşdırmaq üçün onu JSX-ə yeritməzdən əvvəl onu dəyişdirməliyik. Xəritədən istifadə edərək massivi dəyişdirə bilərik . react tərtibatçısı olaraq siz funksional proqramlaşdırmanı çox yaxşı başa düşməlisiniz (xəritə, filtr, azaltma, tapmaq, bəziləri, hər biri). Əgər funksional proqramlaşdırmanı yaxşı başa düşmürsünüzsə, 1-ci günə baxın.
 ```
 const techs = ['HTML', 'CSS', 'JavaScript']
 const techsFormatted = techs.map((tech) => <li>{tech}</li>)
