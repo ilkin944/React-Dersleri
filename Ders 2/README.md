@@ -828,3 +828,4 @@ export default Card
 ![sekil18](./images/s18.png)
 
 Yekun olaraq nəticəyə baxsaq demo məlumatlardan ibarət datanı uğurla çəkib state-içərisində daxil edə bildik.
+![sekil19](./images/s19.png)
