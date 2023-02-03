@@ -262,7 +262,7 @@ export default function App() {
   const [category, setCategory] = useState();
   return (
     <div>
-      <button onClick={() => setCategory(3)}>Kategoriyi Değiştir</button>
+      <button onClick={() => setCategory(3)}>Kategoriyanı dəyiş</button>
       <hr />
       <select value={category} onChange={(e) => setCategory(e.target.value)}>
         <option hidden>- Seçin -</option>
