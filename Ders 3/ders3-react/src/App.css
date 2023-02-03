@@ -1,0 +1,23 @@
+.dark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+}
+.light{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    color: black;
+    background-color: rgb(147, 147, 147);
+}
+input{
+    border:1px solid black !important;
+}

@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base{
+    body{
+        @apply w-screen h-screen flex justify-center items-center
+    }
+    input{
+        @apply border border-solid border-slate-900 p-3;
+    }
+    button{
+        @apply p-3 bg-slate-500 rounded-md
+    }
+}
