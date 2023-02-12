@@ -9,7 +9,7 @@ Node JavaScript-in serverdə işləməsinə imkan verən JavaScript işləmə m�
 Yüklədikdən sonra iki dəfə klikləyin və quraşdırın
 
 Cihaz terminalımızı və ya əmr sorğusunu açıb aşağıdakı əmri yazmaqla node-un komputerimizə quraşdırılıb-qurulmadığını yoxlaya bilərik:
-```
+```javascript
 node -v
 vXX.XX.X
 ```
@@ -17,7 +17,7 @@ vXX.XX.X
 # Modul
 
 Lazım olduqda ixrac və idxal edilə bilən tək və ya çoxlu funksiyalar layihəyə daxil edilə bilər. React-da modullara və ya paketlərə daxil olmaq üçün keçiddən istifadə etmirik, əvəzində modulu idxal edirik. Modul və ya modulların necə idxal və ixrac olunacağına baxaq:
-```
+```javascript
 // App.js
 import logo from './logo.svg';
 import './App.css';
@@ -49,7 +49,7 @@ export default App;
 İndi App.js modullarını başqa fayla idxal edək:
 
 index.js faylına daxil oluruq və kod blokumuzu index faylımızda daxil edirik 
-```
+```javascript
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -87,18 +87,18 @@ Bu uzantıları Visual Studio Kodundan quraşdırmaqla React kodlarınızı səl
 ### Create React App
 
 React layihəsi yaratmaq üçün aşağıdakı yollardan birini istifadə edə bilərsiniz. Tutaq ki, siz node quraşdırmısınız. Mac və ya Linux-da komanda xətti interfeysini (CLI), git bash və ya terminalı açın. Sonra aşağıdakı əmri yerinə yetirin. Mən VS Code terminalı istifadə edirəm.
-```
+```javascript
 npx create-react-app proyektin-adi
 ```
 
 Əgər hər dəfə layihə yaratdığınız zaman npx yazmağı xoşlamırsınızsa, aşağıdakı əmrdən istifadə edərək kompüterinizdə qlobal olaraq create-react-app paketini quraşdıra bilərsiniz.
 
-```
+```javascript
 npm install -g create-react-app
 ```
 
 create-react-app əmrini yazdıqdan sonra aşağıdakı kimi React tətbiqini yaradırsınız:
-```
+```javascript
 create-react-app proyektin-adi
 ```
 
@@ -172,7 +172,7 @@ Yuxarıda yüklədiyimiz React extensionu bizə burda sürətli React strukturu 
 ![sekil4](./images/s4.png)
 
 Yeni yaratdığımız Card komponenti daxilində istifadəçinin profil şəklini, adını, soyadını, işini, e-poçt ünvanını və əlaqə nömrəsini və bacarıqlarını saxlayacaq məlumatları html teqlərimizlə hazırlayaq. Həmçinin yaratdığımız komponenti tətbiqimizdə görmək üçün isə onu valideyn komponenti olan **App.js** də daxil edək və çağıraq.
-```
+```javascript
 import './App.css';
 import Card from './components/Card'
 
@@ -190,7 +190,8 @@ export default App;
 ![sekil6](./images/s6.png)
 
 Əlavə olaraq sadə dizayn işləri üçündə **components** qovluğu daxilində sadəcə Card komponenti üçün istifadə edəcəyimiz css faylı yaradıb, kiçik dizayn işi görək.
-```
+
+```javascript
 import React from 'react'
 import avatar from './images/avatar.jpg'
 import './Card.css'
@@ -222,9 +223,14 @@ const Card = () => {
 }
 
 export default Card
+
 ```
+
+
 Yaratdığımız css faylı içərisində isə bunları əlavə edirik
-```
+
+
+```javascript
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 h3 {
@@ -338,6 +344,8 @@ footer a {
     text-decoration: none;
 }
 ```
+
+
 Kod sturukturu və görüntüsü belədir
 ![sekil5](./images/s5.png)
 
@@ -349,9 +357,11 @@ Kod sturukturu və görüntüsü belədir
 İndi isə Card.js faylı daxilində istifadəçiyə məxsus məlumatları (avatar, ad, soyad, şəhər, vəzifə, əlaqə vasitələri və bacarıqları) buradan silib boş jsx strukturunu saxlayaq.
 
 Dinamik formada ötürməli olduğumuz məlumatları artıq App.js faylında Card komponentini yazdığımız yerdə göndərək. (HTML atributlarına bənzər olaraq)
-```
+
+```javascript
 <Card profilSekli={profilSekli} ad="Ilkin" soyad="Zulfi" sheher="Baku" vezife="Web Developer" email="ilkin944@gmail.com" tel="+994559443382" bacariq="Web Development"/>
 ``` 
+
 ![sekil7](./images/s8.png)
 
 Göndərdiyimiz məlumatları isə eyni qaydada Card komponenti daxilində alırıq.
@@ -370,7 +380,7 @@ Budur yenədə nəticəmiz düz işləyir. İndi isə istifadəçilərin sayın�
 
 Başlanğıcda App.js faylı daxilində bəzi istifadəçi məlumatlarını qeyd etdik. Bu məlumatları isə Card-a yazdıra bilməyimiz üçün Card-ın valideyn komponenti olan CardComponent-ə məlumatları göndəririk.
 
-```
+```javascript
 import './App.css';
 import CardContainer from './components/CardContainer'
 import profilSekli1 from './components/images/avatar.jpg'
@@ -437,12 +447,14 @@ function App() {
 
 export default App;
 ```
+
 ![sekil12](./images/s12.png)
 
 
 
 CardComponent gələn çoxlu məlumat əsasında dövr edib, nə qədər user varsa ona uyğun olaraq Cardları dövr edib yazdırmalıdır. Bu səbəblə də burada map() metodu vasitəsi ilə gələn məlumatlar üzərində dövr edib həmin məlumatları Card komponentinə ötürürük.
-```
+
+```javascript
 import React from 'react'
 import Card from './Card'
 const CardContainer = ({istifadeciMelumatlari}) => {
@@ -468,10 +480,12 @@ const CardContainer = ({istifadeciMelumatlari}) => {
 
 export default CardContainer
 ```
+
 ![sekil13](./images/s13.png)
 
 Eyni zamanda Card komponenti içərsində istifadəçinin bacarıqlarıda birdən çox olduğuna görə burada dövr edib, bacarıqları ekrana yazdırmağa çalışırıq.
-```
+
+```javascript
 import React from 'react'
 import './Card.css'
 const Card = ({ profilSekli, ad, soyad, sheher, vezife, email, tel, bacariq }) => {
@@ -502,16 +516,15 @@ const Card = ({ profilSekli, ad, soyad, sheher, vezife, email, tel, bacariq }) =
 }
 export default Card
 ```
+
 ![sekil14](./images/s14.png)
 ![sekil15](./images/s15.png)
 
 Təbirklər! Brauzerə baxdıqda, istifadəçilərin düzgün formada yerləşdiyini görə bilərik. *(**Card komponentlərinin yan-yana düzülməsi üçün css dəyişikliyi etməyi unutmayın.**)*
 
-
-
 # React Hookları, useState və useEffect.
 
-React hooks, React 16.8 və sonraki versiyalarında əlavə edilmiş yeni bir özəllikdir. Bu, React komponentlərində state və digər lifecycle (yaşam döngüsü) və ya React funksionallığını istifadə etmək üçündür. 
+React hooks, React 16.8 və sonraki versiyalarında əlavə edilmiş yeni bir özəllikdir. Bu, React komponentlərində state və digər lifecycle (yaşam döngüsü) və ya React funksionallığını istifadə etmək üçündür.
 
 Hook-lar JavaScriptdə istifadə etdiyimiz funskiyalardır. Məsələn JavaScriptdə bir funksiya daxilində digər funksiyanı çağırıb işlətdiyimiz kimi Hook-ları da bu formada istifadə edə bilirik.
 
@@ -520,7 +533,7 @@ Hooks, state və side effect-ləri komponentlərdə yaratmaq və yönləndirmək
 Hooks, komponentlərin daha sadə və oxunabilən olmasını təmin edir. Özəlliklə, hooks-lar, komponentləri state və side effect-lərdən asılı olmayan, yalnızca əsas komponentlərə çevirməyə imkan verir. Bu da komponentlərin daha çox yenidən istifadə edilməsinə və komponentlərin bölünə bilməsinə imkan verir.
 
 Reactda hər hansı hook-u istifadə etmək üçün ilk növbədə onu tətbiqimizə daxil etməliyik. Sonrasında isə onu istifadə edə bilərik.
-```
+```javascript
 import React, {useState} from 'react';
 ```
 
@@ -533,20 +546,24 @@ Həmçinin hook-lar üçün bəzi qaydalar da mövcuddur.
 useState hook-u bizə komponentin vəziyyətini izləməyimizə imkan verir. Məsələn hər hansı komponent başlanğıcda bəzi dəyərlər alır və ya sonradan aldığı dəyərləri öz daxilində saxlayır və s.
 
 useState özündə ilk dəyəri, onu dəyişəcək funksiyanı və başlanğıc dəyəri saxlayır. Həmçinin useState hook-u başlanğıc olaraq istənilən tipdə məlumatı özündə saxlaya bilər. Bu bir rəqəm, strinq, boolean, massiv, obyekt və ya ümumiyyətlə boş ola bilər.
-```
+
+```javascript
 const [ilk, setIlk] = useState("başlanğıcda ggöndərmək istədiyimiz");
 ```
+
 useState hookunu saf JavaScriptdə yazılışı isə bu formadadır:
-```
+
+```javascript
 function setIlk() {
   let ilk;
   ilk = "Başlanğıcda göndərmək istədiyimiz";
 }
 setIlk();
 ```
+
 Həmçinin biz *setIlk* funksiyamıza kənardan dəyər daxil edib həmin dəyəri də *ilk* dəyişkəninə ötürə bilərik
 
-```
+```javascript
 function setIlk(e) {
   let ilk = "Başlanğıcda göndərmək istədiyimiz";
   ilk = e;
@@ -555,12 +572,14 @@ setIlk("Qonaq");
 ```
 
 useState-dən istifadə edə bilmək üçün ilk növbədə onu komponentimizə import etməliyik.
-```
+
+```javascript
 import React, { useState } from "react";
 ```
+
 useState hook-u komponentin indiki vəziyyətini və sonrasında dəyişəcəyi funksiyanı özündə saxlayır.
 
-```
+```javascript
 import { useState } from "react";
 
 function App() {
@@ -569,7 +588,8 @@ function App() {
 ```
 
 indi isə useState vasitəsi ilə yaratdığımız dəyişəni App komponentimizdə istifadə edək
-```
+
+```javascript
 function App() {
   const [ad, setAd] = useState("React");
     return (
@@ -581,20 +601,25 @@ function App() {
 
 export default App;
 ```
+
 Biz burada hər dəfə useState("") içərisindəki məlumatı dəyişdikdə bunun brauzerimizdə də dəyişdiyini görə bilirik.
-```
+
+```javascript
 const [ad, setAd] = useState("Qonaq");
 ```
 
 İndi isə App komponentimizdə *Xoş gəlmisiniz* yazısı olan hissədə dəyişiklik edək və bura bir düymə əlavə edək. Hər dəfə düymə klikləndikdə isə state-mizin dəyəri setAd funksiyası vasitəsi ilə dəyişib *Qonaq* olsun. 
-```
+
+```javascript
 <nav className='navbar'>
   <h3>{ad} xoş gəlmisiniz!</h3>
   <button type='button' onClick={() => setAd("Qonaq")}>Dəyiş</button>
 </nav>
 ```
+
 və App.css faylına css kodu əlavə edək
-```
+
+```css
 .navbar{
     width: 95%;
     height: auto;
@@ -604,12 +629,13 @@ və App.css faylına css kodu əlavə edək
     align-items: center;
 }
 ```
+
 Bizim tətbiqimiz yeni açıldıqda *nav* hissədə *React-a xoş gəlmisiniz* yazısı ilə qarşılaşırıq. Ancaq düyməyə klik etdikdə isə yazımız *Qonaq xoş gəlmisinz* ilə əvəzlənmiş olur. Bu isə o deməkdir ki, artıq komponentimizin state-i *"Qonaq"*-dır və bundan sonra biz yeni dəyişənə əsasən işləyə bilərik.
 
 
 İndi isə useState hook-unu öncəki tapşırığımıza tətbiq edək. Burada İstifadəçiləri göstər və gizlət funksiyası yaradaq. İlk növbədə useState import etməli sonrasında isə App komponentimizdə istifadəçiləri göstərmək və gizlətmək üçün bir düymə əlavə etməliyik. State-miz başlanğıcda istifadəçiləri göstərə bilməsi üçün ona ilkin dəyər olaraq *true* göndərək. Düymə klikləndikdə isə, əgər bizim state-miz *true*-dursa, *false* olacaq və ya əksi. Həmçinin bizim state-miz true olarsa CardContaineri göstərək.
 
-```
+```javascript
 import './App.css';
 import { useState } from 'react';
 import CardContainer from './components/CardContainer'
@@ -695,7 +721,7 @@ export default App;
 
 Nəticəni uğurla əldə etdiyimizə görə indi biraz daha çətinləşdirə bilərik. İndi isə, əgər bizim hər hansı istifadəçimiz olmadığı təqdirdə bizə "heç bir istifadəçi yoxdur" yazısı ilə qarşılaşa bilməyimiz üçün CardContainerdə dəyişiklik edək. Bunun üçün ilk növbədə CardContainer komponentimizdə bizə göndərilən məlumatın dəyərinin 0 olub olmadığını yoxlamaq və onun üzərində çalışmağımız lazımdır.
 
-```
+```javascript
 import React from 'react'
 import Card from './Card'
 const CardContainer = ({istifadeciMelumatlari}) => {
@@ -723,6 +749,7 @@ const CardContainer = ({istifadeciMelumatlari}) => {
 
 export default CardContainer
 ```
+
 İndi isə kodumuzun işləyib işləmədiyini bilməyimiz üçün App.js-də *istifadeciler* arrayının içərisində olan obyektlərimizi silək. Budur, nəticə uğurludur. İstifadəçilərimiz olmadığı halda, "Heç bir istifadəçi yoxdur" yazısı ilə qarşılaşır, istifadəçi olduqda isə istifadəçi kartını görə bilirik.
 
 
@@ -749,7 +776,8 @@ Side effect-lər, komponentin çalışmasının ətrafındakı sistemdən və ya
 
 
 CardContainer.js faylımızda isə useEffect vasitəsi ilə Kənar API-yə müraciət edəcək və gələn məlumatları istifadə edəcəyik. Həmçinin biz burada məlumatları saxlaya bilməmiz üçün də useState hook-dan istifadə etməliyik.
-```
+
+```javascript
 import React, { useState, useEffect } from 'react'
 import Card from './Card'
 const CardContainer = () => {
@@ -793,10 +821,12 @@ const CardContainer = () => {
 }
 export default CardContainer
 ```
+
 ![sekil17](./images/s17.png)
 
 Həmçinin gələn data-da məlumatlar öncəki nümunəmizdən fərqli olduğu üçün Card komponentimizdə də dəyişiklik edirik
-```
+
+```javascript
 import React from 'react'
 import './Card.css'
 const Card = ({ image, firstName, lastName, city, title, email, phone, gender }) => {
@@ -825,6 +855,7 @@ const Card = ({ image, firstName, lastName, city, title, email, phone, gender })
 }
 export default Card
 ```
+
 ![sekil18](./images/s18.png)
 
 Yekun olaraq nəticəyə baxsaq demo məlumatlardan ibarət datanı uğurla çəkib state-içərisində daxil edə bildik.
