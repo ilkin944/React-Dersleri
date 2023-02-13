@@ -877,7 +877,7 @@ i18n
 	.init({
 		lng: 'en'
 	})
-	```
+```
 
 Və nümunə dil fayllarımız az ve en dilində olacaqsa fayl quruluşu belə olmalıdır:
 
