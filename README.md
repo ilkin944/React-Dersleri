@@ -1,3 +1,4 @@
+**Qeyd: Bu repoda hələ yenilənməyib. Daha yeni məlumatlar üçün rəsmi [React veb saytına daxil ola bilərsiniz](https://react.dev)**
 # React
 
 ### React nədir və əslində necə işləyir?
