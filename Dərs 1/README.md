@@ -1,12 +1,12 @@
 1. React nədir?
-React təkrar istifadə edilə bilən istifadəçi interfeysi (UI) yaratmaq üçün JavaScript kitabxanasıdır. O, ilkin olaraq 29 may 2013-cü ildə buraxıldı. Cari versiya 18.2.0-dir və bir növ stabildir. React Facebook tərəfindən yaradılıb. React UI komponentlərini yaratmağı çox asanlaşdırır. Rəsmi React sənədlərini [burada](https://www.reactjs.org) tapa bilərsiniz. React ilə işləyərkən biz birbaşa DOM ilə əlaqə saxlamırıq. React-in DOM (Sənəd Obyekt Modeli) manipulyasiyasını idarə etmək üçün öz yolu var. React yeni dəyişikliklər etmək üçün virtual DOM-dan istifadə edir və yalnız dəyişdirilməsi lazım olan elementi yeniləyir. React Tətbiqini qurarkən birbaşa DOM ilə əlaqə saxlamayın və React virtual DOM üçün DOM manipulyasiya işini tərk edin. 
+React təkrar istifadə edilə bilən istifadəçi interfeysi (UI) yaratmaq üçün JavaScript kitabxanasıdır. O, ilk dəfə 29 may 2013-cü ildə təqdim edildi. Cari versiya 18-dir və bir növ stabildir (repo yazıldığı günə əsasən). React Facebook tərəfindən yaradılıb. React UI komponentlərini yaratmağı çox asanlaşdırır. Rəsmi React sənədlərini [buradan](https://www.reactjs.org) tapa bilərsiniz. React ilə işləyərkən biz birbaşa DOM ilə əlaqə saxlamırıq. React-ın DOM (Sənəd Obyekt Modeli) manipulyasiyasını idarə etmək üçün öz yolu var. React yeni dəyişikliklər etmək üçün virtual DOM-dan istifadə edir və yalnız dəyişdirilməsi lazım olan elementi yeniləyir. 
 
 Xülasə:
 
-- React 2013-cü ilin may ayında buraxıldı
-- React Facebook tərəfindən yaradılıb
-- React istifadəçi interfeyslərinin qurulması üçün JavaScript kitabxanasıdır
-- React tək səhifəli proqramlar yaratmaq üçün istifadə olunur - Yalnız bir HTML səhifəsi olan proqram.
+- React 2013-cü ilin may ayında təqdim edildi.
+- React Facebook tərəfindən yaradılıb.
+- React istifadəçi interfeyslərinin qurulması üçün JavaScript kitabxanasıdır.
+- React tək səhifəli proqramlar (SPA) yaratmaq üçün istifadə olunur - Yalnız bir HTML səhifəsi olan proqram.
 - React bizə təkrar istifadə edilə bilən UI komponentləri yaratmağa imkan verir
 - React-ın son buraxılışı 18.2.0-dir
 - [Reactın versiyaları](https://reactjs.org/versions/)
@@ -22,9 +22,9 @@ Niyə biz React istifadə etməyi seçirik? Biz ondan aşağıdakı səbəblər�
 - Yüksək iş imkanı
 
 1. JSX
-JSX JavaScript XML deməkdir. JSX bizə HTML elementlərini JavaScript kodu ilə yazmağa imkan verir. HTML elementinin açılış teqində açılış və bağlanma teqləri, məzmunu və atributu var. Bununla belə, bəzi HTML elementlərinin məzmunu və bağlanma teqi olmaya bilər - onlar öz-özünə bağlanan elementlərdir. React-da HTML elementləri yaratmaq üçün createElement() funksiyasından istifadə etmirik, bunun əvəzinə sadəcə JSX elementlərindən istifadə edirik. Buna görə də, JSX React-da HTML elementlərini yazmağı və əlavə etməyi asanlaşdırır. JSX transpilerdən istifadə edərək brauzerdə JavaScript-ə çevriləcək - babel.js. Babel, JSX-i təmiz JavaScript-ə və ən son JavaScript-i köhnə versiyaya köçürən bir kitabxanadır. Aşağıdakı JSX koduna baxın.
+JSX JavaScript XML deməkdir. JSX bizə HTML elementlərini JavaScript kodu ilə yazmağa imkan verir. HTML elementinin açılış teqində açılış və bağlanma teqləri, məzmunu və atributu var. Bununla belə, bəzi HTML elementlərinin məzmunu və bağlanma teqi olmaya bilər - onlar öz-özünə bağlanan elementlərdir. React-da HTML elementləri yaratmaq üçün createElement() funksiyasından istifadə etmirik, bunun əvəzinə sadəcə JSX elementlərindən istifadə edirik. Buna görə də, JSX React-da HTML elementlərini yazmağı və əlavə etməyi asanlaşdırır. JSX babel.js transpilerdən istifadə edərək kodları brauzerdə JavaScript-ə çevriləcək. Babel, JSX-i təmiz JavaScript-ə və ən son JavaScript-i köhnə versiyaya köçürən bir kitabxanadır. Aşağıdakı JSX koduna baxın.
 
-```
+```js
 // JSX syntax
 // JSX də dırnaqlardan istifadəyə ehtiyac yoxdur.
 
@@ -39,17 +39,17 @@ JSX elementi
 Yuxarıdakı nümunədə gördüyünüz kimi, JSX JavaScript və HTML kimi sintaksisə malikdir. JSX elementi tək HTML elementi və ya əsas HTML elementinə bükülmüş bir çox HTML elementi ola bilər.
 
 Bu JSX elementində h1 olan yalnız bir HTML elementi var .
-```
+```js
 const jsxElement = <h1>JSX elementi</h1> // JS ilə HTML
 ```
 
 h2 daxilində başlıq və məzmun adlı yeni dəyişən elan etməklə daha çox JSX elementi yaradaq .
-```
+```js
 const title = <h2>React</h2>
 ```
 
 Əlavə HTML elementləri əlavə etməklə bu JSX elementinə subtitrlər və digər məzmunlar əlavə edək. Etibarlı JSX elementi yaratmaq üçün hər bir HTML elementi xarici HTML elementi ilə bükülməlidir. Ad başlıq dəyişəni də başlığa dəyişdirilməlidir, çünki bizim JSX elementimiz tətbiqin demək olar ki, bütün başlığını ehtiva edir.
-```
+```js
 const header = (
   <header>
     <h1>React nədir</h1>
@@ -60,7 +60,7 @@ const header = (
 ```
 
 Gəlin daha çox element əlavə etməyə davam edək. Müəllif adını və ilini göstərmək üçün əlavə HTML elementləri.
-```
+```js
 const header = (
   <header>
     <h1>React nədir</h1>
@@ -76,7 +76,7 @@ Gördüyünüz kimi header elementi bütün daxili HTML elementləri üçün əs
 
 JSX elementinin şərh edilməsi
 Biz kodları müxtəlif səbəblərə görə şərh edirik və React-da JSX elementlərini necə şərh etməyi bilmək də yaxşıdır.
-```
+```js
 {
   /*
  <header>
@@ -93,7 +93,7 @@ Biz kodları müxtəlif səbəblərə görə şərh edirik və React-da JSX elem
 JSX Elementinin göstərilməsi
 JSX elementini HTML sənədinə göstərmək üçün əvvəlcə HTML indeksi yaratmalıyıq. index.html istənilən React Tətbiqində olacaq yeganə HTML faylıdır. Buna görə də deyirik ki, hər bir React Tətbiqi tək səhifəli proqramdır. Gəlin index.html faylı yaradaq. React ilə iki yolla başlaya bilərik - ya CDN-dən istifadə etməklə, ya da create-react-app. create-react-app React layihəsinin çıxış qutusu yaradır və buna görə də bir çox insanlar React-in necə işlədiyini başa düşməkdə çətinlik çəkirlər. Mütləq yeni başlayanlar üçün hər şeyi aydınlaşdırmaq üçün bir CDN ilə başlamaq istərdim. Biz CDN-dən yalnız bu bölmədə istifadə edirik və problemin qalan hissəsində create-react-app istifadə edəcəyik və mən də sizə hər zaman yalnız create-react-app istifadə etməyi tövsiyə edirəm.
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -112,7 +112,7 @@ JSX elementini HTML sənədinə göstərmək üçün əvvəlcə HTML indeksi yar
 
 Yuxarıdakı index.html-dən göründüyü kimi, bizdə id-si root olan div və script teqi var. root div bütün react komponentlərini index.html-ə qoşmaq üçün qapıdır. Script teqində biz öz JavaScript-imizi yazacağıq, lakin script növü babel olacaq. Babel, JSX react-ını brauzerdə təmiz JavaScript-ə köçürəcək. Ssenariyə babel əlavə edək. Babel daxilində biz istənilən təmiz JavaScript, JSX və ümumiyyətlə istənilən react kodunu yaza bilərik.
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -133,7 +133,7 @@ Yuxarıdakı index.html-dən göründüyü kimi, bizdə id-si root olan div və 
 
 Babel kitabxanası bizim sənədimizlə əlaqələndirilib və indi biz ondan istifadə edə bilərik. Növbəti addım CDN və ya linkdən istifadə edərək React və ReactDOM-u idxal etməkdir. React və ReactDOM-u əlaqələndirmək üçün biz hər iki paketi CDN-dən index.html gövdəsinə əlavə edirik. React-ın index.html ilə əlaqəli olub olmadığını yoxlamaq üçün console.log(React) vasitəsilə onu yoxlamağa çalışın. Brauzer konsolunu açın və bir obyekt almalısınız. React metodlarını ehtiva edən obyekt görsəniz, layihənizi React CDN ilə əlaqələndirə bildiniz və siz React istifadə etməyə hazırsınız.
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -159,7 +159,7 @@ Babel kitabxanası bizim sənədimizlə əlaqələndirilib və indi biz ondan is
 
 İndi JSX və JSX elementlərini bilirdiniz. Brauzerdə JSX elementini göstərək, bunun üçün bizə React və ReactDOM kitabxanası lazımdır. React və ReactDOM-a əlavə olaraq JSX-i JavaScript koduna köçürmək üçün bizə babel lazımdır. ReactDOM paketində metod render var. Render metodu iki arqument götürür: JSX elementi və ya komponent və root sənəd.
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -196,7 +196,7 @@ Babel kitabxanası bizim sənədimizlə əlaqələndirilib və indi biz ondan is
 JSX göstərilir
 
 Gəlin daha çox məzmun təqdim edək. Daha çox məzmun göstərmək üçün JSX elementində daha çox HTML elementi olmalıdır. Məsələn, biz veb-saytın başlığını yarada bilərik və başlıqda başlıq, altyazı, müəllif və ya tarix və s. ola bilər. Unutmayın ki, biz eyni vaxtda yalnız bir JSX elementini göstərə bilərik.
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -242,7 +242,7 @@ Daha çox məzmun göstərilir
 Veb saytın başlığı üçün JSX elementi yaratdıq. Saytın əsas və altbilgisi haqqında nə demək olar? Başlığa bənzər, gəlin əsas və altbilgi üçün JSX elementi yaradaq.
 
 Veb saytın əsas hissəsi üçün JSX elementi.
-```
+```js
 // JSX element
 const main = (
   <main>
@@ -256,7 +256,7 @@ const main = (
 )
 ```
 Veb saytın altbilgi hissəsi üçün JSX elementi.
-```
+```js
 // JSX element
 const footer = (
   <footer>
@@ -267,7 +267,7 @@ const footer = (
 
 İndi bizim üç JSX elementimiz var: header, əsas və footer. Üç JSX elementinin hamısını göstərməyin ən yaxşı yolu onların hamısını əsas JSX elementinə bükmək və ya massivdə yerləşdirməkdir. JSX elementini başqa JSX elementinə daxil etmək üçün biz buruq mötərizədən istifadə edirik, {} və buruq mötərizə daxilində JSX adını çağırırıq.
 
-```
+```js
 // JSX element for the header part of the website
 const header = (
   <header>
@@ -305,7 +305,7 @@ const app = (
 )
 ```
 İndi gəlin hər şeyi birləşdirək və brauzerə göstərək.  .
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -385,7 +385,7 @@ JSX-də stil və class adı
 İndiyə qədər JSX elementlərində heç bir üslub tətbiq etməmişik. İndi gəlin JSX elementlərimizə üslub əlavə edək. Inline üslubu reactnın ortaya çıxmasından sonra çox populyarlaşdı. Başlıq JSX elementinə sərhəd əlavə edək.
 
 JSX elementinə üslub əlavə etmək üçün biz inline stil və ya className istifadə edirik. Stil obyektini {} istifadə edərək inyeksiya edirik. Hər bir CSS xüsusiyyəti açara çevrilir və hər bir CSS xassə dəyəri obyekt üçün dəyərə çevrilir. Məsələn, aşağıdakı nümunədə haşiyə açar və '2px solid orange' dəyər, color açar və 'black' dəyər, fontSize açar və '18px' dəyərdir. React və ya JavaScript-də CSS obyektində açar kimi istifadə etdikdə bütün iki sözlü CSS xassələri camelCase-ə dəyişəcək.
-```
+```js
 const header = (
   <header
     style={{ border: '2px solid orange', color: 'black', fontSize: '18px' }}
@@ -398,7 +398,7 @@ const header = (
   </header>
 )
 ```
-```
+```js
 // və ya bu üsuldan istifadə edə bilərik.
 
 const style = { border: '2px solid orange', color: 'black', fontSize: '18px' }
@@ -418,7 +418,7 @@ Tətbiqinizi hazırlayarkən hər şeyin yaxşı olub olmadığını bilmək ü�
 Gəlin yaratdığımız bütün JSX elementlərinin üslubunu davam etdirək: başlıq, əsas və altbilgi. Tətbiqimizi tərtib etmək üçün müntəzəm daxili üslubdan da istifadə edə bilərik. Normal üslubdan istifadə edərək, HTML elementini hədəfləmək üçün etiket adı, id, sinif, atribut və digər üsullardan istifadə edirik. Bu, React tərtibatçı cəmiyyətində çox yaygındır - insanlar id əvəzinə siniflərdən çox istifadə edirlər. Bu materialda id əvəzinə yalnız sinifdən istifadə edəcəyəm.
 
 JSX elementində biz sinif əvəzinə className yazırıq, çünki sinif JavaScript-də qorunan sözdür. ClassName ilə oxşar, etiket teqində for əvəzinə htmlFor. Aşağıdakı nümunəyə baxın.
-```
+```js
 const title = <h1 className='title'>Reactda başlanğıc</h1>
 const inputField = (
   <div>
@@ -435,7 +435,7 @@ ClassName əvəzinə və ya htmlFor əvəzinə sinif istifadə edilərsə, belə
 Class name xəbərdarlığı
 
 İndi siz daxili üslubdan necə istifadə edəcəyinizi və className-dən necə istifadə edəcəyinizi bilirsiniz. Gəlin bütün JSX elementlərini üslublandıraq.
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -519,7 +519,7 @@ Class name xəbərdarlığı
 Bütün JSX elementlərinin üslubu
 
 Stil obyekti əvəzinə müntəzəm üslub metodundan istifadə edərək yuxarıdakılardan daha asandır. İndi gəlin bütün JSX-i tərtib etmək üçün daxili üslubdan istifadə edək. Xarici üslub metodundan istifadə etmək də mümkündür. 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -686,7 +686,7 @@ Daxili Stil
 
 JSX Elementinə verilənlərin yeridilməsi
 İndiyə qədər biz JSX elementlərində statik məlumatlardan istifadə etmişik, lakin dinamik məlumat kimi müxtəlif məlumat növlərini də ötürə bilərik. Dinamik məlumatlar sətir, nömrə, boolean, massiv və ya obyekt ola bilər. Məlumat növlərinin hər birini addım-addım görək. JSX-ə məlumat daxil etmək üçün biz {} mötərizəsindən istifadə edirik.
-```
+```js
 const welcome = 'React'
 const title = 'Reactda başlanğıc'
 const subtitle = 'React-da necə işləməli'
@@ -738,7 +738,7 @@ const header = (
 
 JSX Elementinə nömrə yeridilməsi
 
-```
+```js
 const numOne = 3
 const numTwo = 2
 
@@ -758,7 +758,7 @@ Yuxarıdakı nümunədə gördüyünüz kimi, bəzi arifmetik hesablamalar və �
 JSX Elementinə massiv yeridilməsi
 Massiv üçün misal göstərmək üçün gəlin HTML, CSS, JavaScript-i massivlə dəyişdirək və onu aşağıdakı əsas JSX elementinə inyeksiya edək. Daha sonra, siyahıların göstərilməsi bölməsində daha ətraflı danışacağıq.
 
-```
+```js
 const techs = ['HTML', 'CSS', 'JavaScript']
 
 const main = (
@@ -781,7 +781,7 @@ JSX Elementinə obyektin yeridilməsi
 Biz JSX-ə sətir, nömrə, boolean, massiv verilənlərini yeridə bilərik, lakin obyekti birbaşa yeridə bilmirik. Məlumatı JSX elementinə yeritməzdən əvvəl biz əvvəlcə obyekt dəyərlərini çıxarmalıyıq və ya obyektin məzmununu dağıdmalıyıq. Məsələn, gəlin obyektin içərisinə ad və Soyad yazaq və onları JSX daxilində istifadə etmək üçün çıxaraq.
 
 İndi gəlin hər şeyi bir yerə yığaq. Burada, aşağıdakı nümunədə məlumat dinamik olaraq JSX-ə yeridilir. 
-```
+```js
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -982,12 +982,12 @@ Biz JSX-ə sətir, nömrə, boolean, massiv verilənlərini yeridə bilərik, la
 Dinamik məlumat
 
 Gördüyünüz kimi siyahıların hamısı bir sətirdədir. Ona görə də JSX-ə yeritməzdən əvvəl siyahını istədiyimiz kimi formatlaşdırmalıyıq. Siyahını formatlaşdırmaq üçün onu JSX-ə yeritməzdən əvvəl onu dəyişdirməliyik. Xəritədən istifadə edərək massivi dəyişdirə bilərik . react tərtibatçısı olaraq siz funksional proqramlaşdırmanı çox yaxşı başa düşməlisiniz (xəritə, filtr, azaltma, tapmaq, bəziləri, hər biri). Əgər funksional proqramlaşdırmanı yaxşı başa düşmürsünüzsə, 1-ci günə baxın.
-```
+```js
 const techs = ['HTML', 'CSS', 'JavaScript']
 const techsFormatted = techs.map((tech) => <li>{tech}</li>)
 ```
 Aşağıdakı kod nümunəsində siyahı indi siyahı elementlərini ehtiva edir və düzgün formatlaşdırılıb.
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -1188,7 +1188,7 @@ Aşağıdakı kod nümunəsində siyahı indi siyahı elementlərini ehtiva edir
 Göstərilən siyahılar
 
 Siyahı İD Yuxarıda gördüyünüz kimi, indi siyahılar düzgün formatlaşdırılıb, lakin konsolda hər bir siyahı uşağının unikal açarı olmalıdır deyə xəbərdarlıq var. Massivdə bizdə id yoxdur, lakin məlumatlarınızda id olduqda id-i unikal dəyər kimi ötürmək adi haldır. İndi gəlin, xəbərdarlığı aradan qaldırmaq üçün hər bir elementi unikal bir açarla ötürək.
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
